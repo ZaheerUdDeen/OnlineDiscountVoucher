@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Form {
 
+	
 	private Requester requester;
 	private Customer customer;
 	private String eventDateLocation;
@@ -20,6 +21,10 @@ public class Form {
 	private String airportFrom;
 	private String airportTo;
 	private String restrictionByFareFamily;
+	private String passengerType;
+	private String justification;
+	private Customer sendTo;
+	
 	public Requester getRequester() {
 		return requester;
 	}
@@ -134,8 +139,6 @@ public class Form {
 	public void setSendTo(Customer sendTo) {
 		this.sendTo = sendTo;
 	}
-	private String passengerType;
-	private String justification;
-	private Customer sendTo;
+	
 
 }
