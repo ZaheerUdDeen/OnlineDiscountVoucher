@@ -1,0 +1,9 @@
+public class Requester {
+
+	private int id;
+	private int firstName;
+	private int lastName;
+	private int mobileNumber;
+	private int emailAddress;
+
+}

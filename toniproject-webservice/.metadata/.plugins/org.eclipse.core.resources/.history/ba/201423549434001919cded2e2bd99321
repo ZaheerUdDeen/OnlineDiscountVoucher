@@ -1,0 +1,5 @@
+package com.onlinepromocode.entities;
+
+public class Customer {
+
+}

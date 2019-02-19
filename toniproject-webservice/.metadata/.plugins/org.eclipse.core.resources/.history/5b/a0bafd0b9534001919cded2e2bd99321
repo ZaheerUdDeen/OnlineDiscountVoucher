@@ -1,0 +1,27 @@
+package com.onlinepromocode.entities;
+
+import java.util.Date;
+
+public class Form {
+
+	private Requester requester;
+	private Customer customer;
+	private String eventDateLocation;
+	private double quantity;
+	private String voucherTyper;
+	private double discountEconoy;
+	private double discountBusiness;
+	private String puchaseForm;
+	private Date purchaseTo;
+	private Date outboundTravelFrom;
+	private Date outboundTravelTo;
+	private Date inbountTravelForm;
+	private Date inboundTravelTo;
+	private String airportFrom;
+	private String airportTo;
+	private String restrictionByFareFamily;
+	private String passengerType;
+	private String justification;
+	private Customer sendTo;
+
+}
