@@ -2,10 +2,36 @@ package com.onlinepromocode.entities;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
+
+@Entity
 public class Form {
 
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	
-	private Requester requester;
+	
+	
+	@ManyToOne 
+	Requester requester;
+	
+	@Override
+	
+	public String toString() {
+		return "Form [requester=" + requester + ", eventDateLocation=" + eventDateLocation + ", quantity=" + quantity
+				+ ", voucherTyper=" + voucherTyper + ", discountEconoy=" + discountEconoy + ", discountBusiness="
+				+ discountBusiness + ", puchaseForm=" + puchaseForm + ", purchaseTo=" + purchaseTo
+				+ ", outboundTravelFrom=" + outboundTravelFrom + ", outboundTravelTo=" + outboundTravelTo
+				+ ", inbountTravelForm=" + inbountTravelForm + ", inboundTravelTo=" + inboundTravelTo + ", airportFrom="
+				+ airportFrom + ", airportTo=" + airportTo + ", restrictionByFareFamily=" + restrictionByFareFamily
+				+ ", passengerType=" + passengerType + ", justification=" + justification + "]";
+	}
+	@Transient
 	private Customer customer;
 	private String eventDateLocation;
 	private double quantity;
@@ -23,7 +49,9 @@ public class Form {
 	private String restrictionByFareFamily;
 	private String passengerType;
 	private String justification;
-	private Customer sendTo;
+	private String aprovalStatus;
+
+	private String sendTo;
 	
 	public Requester getRequester() {
 		return requester;
@@ -133,11 +161,24 @@ public class Form {
 	public void setJustification(String justification) {
 		this.justification = justification;
 	}
-	public Customer getSendTo() {
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getSendTo() {
 		return sendTo;
 	}
-	public void setSendTo(Customer sendTo) {
+	public void setSendTo(String sendTo) {
 		this.sendTo = sendTo;
+	}
+	public String getAprovalStatus() {
+		return aprovalStatus;
+	}
+	public void setAprovalStatus(String aprovalStatus) {
+		this.aprovalStatus = aprovalStatus;
 	}
 	
 

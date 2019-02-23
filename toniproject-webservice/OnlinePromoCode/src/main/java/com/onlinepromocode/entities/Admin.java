@@ -6,14 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Requester {
-
+public class Admin {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
 	private String firstName;
 	private String lastName;
-	private String password;
+	private String mobileNumber;
 	private String emailAddress;
+	private String password;
 	public int getId() {
 		return id;
 	}
@@ -32,7 +33,12 @@ public class Requester {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
 	public String getEmailAddress() {
 		return emailAddress;
 	}
@@ -45,5 +51,4 @@ public class Requester {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 }
