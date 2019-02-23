@@ -19,5 +19,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jersey'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'mysql:mysql-connector-java'
+	compile group: 'javax.mail', name: 'mail', version: '1.4.1'
+	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
